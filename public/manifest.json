@@ -1,11 +1,12 @@
 {
-  "short_name": "My Extension",
-  "name": "My Extension",
+  "short_name": "Permissions Extension",
+  "name": "Permissions Extension",
   "version": "1.1",
   "manifest_version": 2,
   "background": {
     "scripts": ["app/background.js"]
   },
+  "permissions":["tabs"],
   "browser_action": {},
   "content_scripts" : [
     {
@@ -15,7 +16,7 @@
     }
   ],
   "web_accessible_resources":[
-    "/static/css/content.css", "/static/media/*"
+    "/static/css/content.css", "/static/media/*","get-access.html","get-access.js"
   ],
   "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
 }
